@@ -1,0 +1,13 @@
+set cut_paste_input [stack 0]
+version 11.1 v3
+push $cut_paste_input
+Expression {
+ expr0 r>max(g,b)?1:0
+ expr1 g>max(r,b)?1:0
+ expr2 b>max(r,g)?1:0
+ name wtf
+ tile_color 0x990000
+ selected true
+ xpos -3188
+ ypos -22
+}
