@@ -1,0 +1,191 @@
+set cut_paste_input [stack 0]
+version 11.1 v3
+push $cut_paste_input
+Roto {
+ output alpha
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097152}
+    {t x44800000 x44070000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {curvegroup Bezier1 512 bezier
+     {{cc
+       {f 8192}
+       {px x447fc000
+        {0 0}
+        {x446350b7 x440d6b61}
+        {0 0}
+        {0 xbdccc000}
+        {x4463b333 x44086ccd}
+        {0 x3dccc000}
+        {xbe999800 0}
+        {x4464d333 x4408cccd}
+        {x3e999800 0}
+        {xbe4cd000 xbe999800}
+        {x44659333 x4407599a}
+        {x3e4cd000 x3e999800}
+        {x3e999800 xbeccd000}
+        {x4466e666 x44085333}
+        {xbe999800 x3eccd000}
+        {0 xbe4cd000}
+        {x44661333 x44096ccd}
+        {0 x3e4cd000}
+        {0 xbdcce000}
+        {x4466b99a x440a4666}
+        {0 x3dcce000}}}     idem}
+     {tx x447fc000 x44654ea0 x44096be3}
+     {a osw x41200000 osf 0 str 1 spx x44800000 spy x44070000 sb 1 ltn x447fc000 ltm x447fc000 tt x40800000}}}}}}
+ toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_brush_hardness 0.200000003
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {1024 540}
+ colorOverlay {0 0 0 0}
+ lifetime_type "all frames"
+ lifetime_start 1023
+ lifetime_end 1023
+ motionblur_shutter_offset_type centred
+ source_black_outside true
+ name Roto3
+ selected true
+ xpos -272
+ ypos -34
+}
+Blur {
+ channels rgba
+ size 1.5
+ name Blur2
+ selected true
+ xpos -272
+ ypos -2
+}
+set N8c103180 [stack 0]
+Constant {
+ inputs 0
+ channels rgb
+ name Constant3
+ selected true
+ xpos -418
+ ypos -130
+}
+Grade {
+ black 0.008
+ name Grade2
+ selected true
+ xpos -418
+ ypos -58
+}
+Copy {
+ inputs 2
+ from0 rgba.alpha
+ to0 rgba.alpha
+ name Copy2
+ selected true
+ xpos -418
+ ypos -6
+}
+Premult {
+ name Premult2
+ selected true
+ xpos -418
+ ypos 139
+}
+push $N8c103180
+Erode {
+ name Erode2
+ selected true
+ xpos -272
+ ypos 67
+}
+Constant {
+ inputs 0
+ channels rgb
+ color 0.9
+ name Constant4
+ selected true
+ xpos -145
+ ypos -63
+}
+Grade {
+ whitepoint 1.48
+ name Grade3
+ selected true
+ xpos -145
+ ypos 9
+}
+Copy {
+ inputs 2
+ from0 rgba.alpha
+ to0 rgba.alpha
+ name Copy3
+ selected true
+ xpos -145
+ ypos 67
+}
+Merge2 {
+ inputs 2
+ name Merge2
+ selected true
+ xpos -145
+ ypos 139
+}
+Transform {
+ translate {109.5 -19}
+ scale 0.83
+ center {916 552}
+ shutteroffset centred
+ name Transform3
+ selected true
+ xpos -145
+ ypos 163
+}
+Soften {
+ size 1
+ name Soften2
+ selected true
+ xpos -145
+ ypos 229
+}
+Grain2 {
+ name Grain2_2
+ label "Kodak 5248"
+ selected true
+ xpos -145
+ ypos 278
+ red_size 2.4
+ green_size 1.8
+ blue_size 2.7
+ red_i 0.545
+ green_i 0.265
+ blue_i 0.685
+ red_m 0.045
+ green_m 0.055
+ blue_m 0.055
+ black {0.005 0.005 0.012}
+ minimum {0 0 0}
+ maskgrain false
+}
+Premult {
+ name Premult3
+ selected true
+ xpos -145
+ ypos 327
+}
