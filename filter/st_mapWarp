@@ -1,0 +1,166 @@
+set cut_paste_input [stack 0]
+version 10.5 v7
+Roto {
+ inputs 0
+ output alpha
+ cliptype none
+ curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097152}
+    {t x44800000 x44428000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {curvegroup Bezier1 512 bezier
+     {{cc
+       {f 8192}
+       {px x42380000
+        {x4281c5e2 x4235aea0}
+        {x443d0000 x44a28000}
+        {xc281c5e1 xc235aea4}
+        {x42050cd0 x42f7bf8f}
+        {x440f8000 x44818000}
+        {xc2050ccb xc2f7bf90}
+        {xc2bff2aa x42efef5c}
+        {x44118000 x44230000}
+        {x42bff2ae xc2efef59}
+        {xc3210b6e xbfcc1750}
+        {x4487c000 x43c60000}
+        {x43210b6e x3fcc189f}
+        {xc2352484 xc2d102be}
+        {x44adc000 x44250000}
+        {x42352483 x42d102be}
+        {x427ff3fe xc2bc7154}
+        {x44a50000 x446a0000}
+        {xc27ff408 x42bc7150}
+        {x4285188c xc22bcc34}
+        {x446e8000 x44a2c000}
+        {xc285188e x422bcc2e}}}     idem}
+     {tx x42380000 x446dedb7 x44605b6e}
+     {a osw x41200000 osf 0 str 1 spx x44800000 spy x44428000 sb 1 ltn x42380000 ltm x42380000 tt x40800000}}}}}}
+ toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+ toolbar_brush_hardness 0.200000003
+ toolbar_source_transform_scale {1 1}
+ toolbar_source_transform_center {1024 778}
+ colorOverlay {0 0 0 0}
+ lifetime_type "all frames"
+ lifetime_start 46
+ lifetime_end 46
+ motionblur_shutter_offset_type centred
+ source_black_outside true
+ name Roto3
+ selected true
+ xpos -15555
+ ypos -242
+}
+Blur {
+ channels rgba
+ size 500
+ name Blur6
+ selected true
+ xpos -15555
+ ypos -132
+}
+push $cut_paste_input
+Expression {
+ expr0 (x+.5)/width
+ expr1 (y+.5)/height
+ name Expression2
+ selected true
+ xpos -15791
+ ypos -422
+}
+Dot {
+ name Dot8
+ selected true
+ xpos -15757
+ ypos -354
+}
+set N1856d740 [stack 0]
+Dot {
+ name Dot12
+ selected true
+ xpos -15383
+ ypos -354
+}
+Transform {
+ translate {{curve x1 30 x10 132 x60 8 x100 88} {curve x1 0 x10 58 x60 -96 x100 120}}
+ scale {{curve x1 1 x25 0.75 x46 3.20909091 x100 1.46}}
+ center {1024 778}
+ shutteroffset centred
+ name Transform5
+ selected true
+ xpos -15417
+ ypos -247
+}
+Grade {
+ white {1.480000019 0.9599999785 1.24000001 1}
+ name Grade3
+ selected true
+ xpos -15417
+ ypos -223
+ disable true
+}
+Merge2 {
+ inputs 2
+ operation mask
+ name Merge4
+ selected true
+ xpos -15417
+ ypos -132
+}
+push $N1856d740
+Dot {
+ name Dot14
+ selected true
+ xpos -15757
+ ypos -67
+}
+Merge2 {
+ inputs 2
+ name Merge5
+ selected true
+ xpos -15417
+ ypos -70
+}
+CheckerBoard2 {
+ inputs 0
+ name image
+ selected true
+ xpos -15097
+ ypos -226
+}
+set N828d5b40 [stack 0]
+STMap {
+ inputs 2
+ uv rgba
+ name STMap1
+ selected true
+ xpos -15097
+ ypos -74
+}
+push $N828d5b40
+Merge2 {
+ inputs 2
+ name Merge13
+ selected true
+ xpos -14829
+ ypos -70
+}
