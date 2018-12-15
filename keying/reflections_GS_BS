@@ -1,0 +1,52 @@
+set cut_paste_input [stack 0]
+version 10.5 v7
+push $cut_paste_input
+NoOp {
+ name SRC_PLATE_GOES_HERE
+ selected true
+ xpos -155
+ ypos 76
+}
+Constant {
+ inputs 0
+ channels rgb
+ color {0.005175272468 0.004116270225 0.001804203377 0}
+ name Constant3
+ selected true
+ xpos -305
+ ypos 116
+}
+ChannelMerge {
+ inputs 2
+ A rgba.red
+ B rgba.red
+ name ChannelMerge4
+ selected true
+ xpos -153
+ ypos 129
+}
+Shuffle {
+ red alpha
+ green alpha
+ blue alpha
+ name Shuffle5
+ label "\[value in]"
+ selected true
+ xpos -153
+ ypos 205
+}
+Grade {
+ name Grade17
+ selected true
+ xpos -153
+ ypos 254
+}
+Median {
+ channels alpha
+ size 1
+ ignore_top_line false
+ name Median1
+ selected true
+ xpos -153
+ ypos 288
+}
