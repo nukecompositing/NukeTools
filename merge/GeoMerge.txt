@@ -4,73 +4,74 @@ push $cut_paste_input
 Group {
  name GComp_Lin
  selected true
- xpos -4761
- ypos 1874
- addUserKnob {20 User}
- addUserKnob {18 rgb}
- rgb {0 0 0}
- addUserKnob {6 rgb_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
- addUserKnob {7 Grade R -1e+07 1e+08}
- addUserKnob {7 BlurGMatte t "Blur Garbage  matte" R 0 1e+06}
- BlurGMatte 16
+ xpos 191
+ ypos -56
 }
  Input {
   inputs 0
   name GMatte
+  selected true
   xpos 933
   ypos 525
   number 3
  }
  Blur {
   channels alpha
-  size {{GComp_Lin.BlurGMatte}}
+  size 100
   name Blur1
   selected true
   xpos 933
-  ypos 601
+  ypos 549
+  disable true
  }
  Input {
   inputs 0
   name Fg
+  selected true
   xpos 580
   ypos 209
  }
-set N292f3840 [stack 0]
-push $N292f3840
+set N12739210 [stack 0]
+push $N12739210
  Dot {
   name Dot2
+  selected true
   xpos 614
   ypos 340
  }
-set N292f5de0 [stack 0]
+set N1273b7b0 [stack 0]
  Input {
   inputs 0
   name Bg
+  selected true
   xpos 165
   ypos 202
   number 1
  }
  Dot {
   name Dot1
+  selected true
   xpos 197
   ypos 325
  }
-set N292fa920 [stack 0]
-push $N292fa920
+set N127402f0 [stack 0]
+push $N127402f0
  Input {
   inputs 0
   name FgMask
+  selected true
   xpos 356
   ypos 204
   number 2
  }
-set N2a600e70 [stack 0]
-push $N292f5de0
+set N12742890 [stack 0]
+push $N1273b7b0
  Copy {
   inputs 2
   from0 rgba.alpha
   to0 rgba.alpha
   name Copy1
+  selected true
   xpos 356
   ypos 332
  }
@@ -79,6 +80,7 @@ push $N292f5de0
   help "This node provides IBKGizmo a colour reference in which to base its\nkeying algorithm on a per pixel basis.\nThe idea is to remove the foreground\nimage and only leave the shades and hues of the original\nblue/greenscreen.\nAttach the output of this node to the 'c' input of a default\nIBKGizmo. Attach the input of this node along with the 'fg' input of the\nIBKGizmo to the original screen.\nPick which colour your screen type is in both\nnodes and then while viewing the alpha output from the IBKGizmo lower the\ndarks.b (if a bluescreen - adjust darks.g if a greenscreen) in this node \nuntil\nyou see a change in the garbage area of the matte. Once you see a change then\nyou have gone too far -back off a step. If you are still left with discoloured\nedges you can use the other colours in the lights and darks to eliminate them.\nRemember the idea is \nto be left with the original shades of the screen and the\nforeground blacked out. While swapping between viewing the matte from the\nIBKGizmo and the rgb output of this IBKColour adjust the other colours \nuntil\nyou see a change in the garbage area of the matte. Simple rule of thumb - if you\nhave a light red discoloured area increase the lights.r - if you have a dark\ngreen discoloured area increase darks.g. If your screen does not have a very\nsaturated hue you may still be left\n with areas of discolouration after the\nabove process. The 'erode' slider can help with this - while viewing the rgb\noutput adjust the erode until those areas disappear.\nThe 'patch black' slider\nallows you to fill in the black areas with screen colour. This is not always\nnecessary but if you see blue squares in your composite increase this value and\nit'll fix it.\nThe above is the only real workflow for this node - working from\nthe top parameter to the bottom parameter- going back to tweak darks/lights with\n'erode' and 'patch black' activated isn't really gonna work. "
   tile_color 0x990000
   note_font "Bitstream Vera Sans"
+  selected true
   xpos 356
   ypos 366
   mapsize {0.15 0.15}
@@ -105,7 +107,7 @@ push $N292f5de0
    xpos 16
    ypos -21
   }
-set N205f7bd0 [stack 0]
+set N3ad0f70 [stack 0]
   Invert {
    channels alpha
    name Invert1
@@ -120,15 +122,15 @@ set N205f7bd0 [stack 0]
    xpos -18
    ypos 145
   }
-set N205d12c0 [stack 0]
+set N3ad8830 [stack 0]
   Dot {
    name Dot3
    tile_color 0x9597bf00
    xpos 16
    ypos 699
   }
-push $N205d12c0
-push $N205f7bd0
+push $N3ad8830
+push $N3ad0f70
   Dot {
    name Dot17
    xpos 126
@@ -163,7 +165,7 @@ push $N205f7bd0
    xpos 92
    ypos 300
   }
-set N205e9cb0 [stack 0]
+set N3af1420 [stack 0]
   Clamp {
    channels {rgba.red rgba.green rgba.blue -rgba.alpha}
    maximum 0
@@ -173,7 +175,7 @@ set N205e9cb0 [stack 0]
    xpos 212
    ypos 300
   }
-set N205edda0 [stack 0]
+set N3af5510 [stack 0]
   Dot {
    name Dot1
    xpos 400
@@ -184,14 +186,14 @@ set N205edda0 [stack 0]
    xpos 400
    ypos 557
   }
-push $N205edda0
-push $N205e9cb0
+push $N3af5510
+push $N3af1420
   Dot {
    name Dot4
    xpos 126
    ypos 349
   }
-set N2a001140 [stack 0]
+set N26703790 [stack 0]
   Copy {
    inputs 2
    from0 rgba.red
@@ -241,7 +243,7 @@ set N2a001140 [stack 0]
    xpos 212
    ypos 663
   }
-push $N2a001140
+push $N26703790
   Merge {
    inputs 2
    name Merge1
@@ -257,13 +259,13 @@ push $N2a001140
    xpos 92
    ypos 691
   }
-set N2058d830 [stack 0]
+set N2672df90 [stack 0]
   Output {
    name Output1
    xpos 92
    ypos 839
   }
-push $N2058d830
+push $N2672df90
   Viewer {
    input_process false
    name Viewer1
@@ -271,12 +273,13 @@ push $N2058d830
    ypos 804
   }
  end_group
-push $N292fa920
+push $N127402f0
  Merge2 {
   inputs 2
   operation geometric
   invert_mask true
   name Merge2
+  selected true
   xpos 90
   ypos 366
  }
@@ -284,11 +287,13 @@ push $N292fa920
   inputs 2
   operation divide
   name Merge3
+  selected true
   xpos 90
   ypos 420
  }
  Dot {
   name Dot4
+  selected true
   xpos 124
   ypos 466
  }
@@ -296,19 +301,22 @@ push $N292fa920
   inputs 2
   operation multiply
   name Merge4
+  selected true
   xpos 163
   ypos 463
  }
  Dot {
   name Dot3
+  selected true
   xpos 197
   ypos 591
  }
-set N2a02dfb0 [stack 0]
+set N26756ab0 [stack 0]
  Merge2 {
   inputs 2
   operation multiply
   name Merge6
+  selected true
   xpos 163
   ypos 670
  }
@@ -317,21 +325,24 @@ set N2a02dfb0 [stack 0]
   value 2
   invert_mask true
   name Multiply3
+  selected true
   xpos 163
   ypos 694
  }
-push $N292f5de0
+push $N1273b7b0
  Grade {
-  add {{GComp_Lin.Grade}}
+  add -0.4
   name Grade1
+  selected true
   xpos 580
   ypos 564
  }
-push $N2a02dfb0
+push $N26756ab0
  Merge2 {
   inputs 2
   operation plus
   name Merge7
+  selected true
   xpos 580
   ypos 588
  }
@@ -339,6 +350,7 @@ push $N2a02dfb0
   add {{parent.Grade1.add.main i}}
   reverse true
   name Grade2
+  selected true
   xpos 580
   ypos 612
  }
@@ -346,6 +358,7 @@ push $N2a02dfb0
   inputs 2
   operation divide
   name Merge8
+  selected true
   xpos 580
   ypos 694
  }
@@ -353,20 +366,23 @@ push $N2a02dfb0
   inputs 3
   channels rgba
   name Keymix1
+  selected true
   xpos 774
   ypos 740
  }
  Output {
   name Output1
+  selected true
   xpos 580
   ypos 780
  }
-push $N292f5de0
-push $N2a600e70
+push $N1273b7b0
+push $N12742890
  Viewer {
   inputs 2
   input_process false
   name Viewer1
+  selected true
   xpos 857
   ypos 396
  }
