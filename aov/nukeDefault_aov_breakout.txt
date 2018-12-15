@@ -1,5 +1,31 @@
 set cut_paste_input [stack 0]
-version 10.5 v7
+version 11.1 v2
+BackdropNode {
+ inputs 0
+ name BackdropNode21
+ tile_color 0x7171c600
+ label "Rebuild method"
+ note_font_size 42
+ selected true
+ xpos -2972
+ ypos -505
+ bdwidth 3414
+ bdheight 1090
+ z_order -2
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode22
+ tile_color 0x7171c600
+ label "Subtractive method"
+ note_font_size 42
+ selected true
+ xpos -4038
+ ypos -517
+ bdwidth 886
+ bdheight 1344
+ z_order -2
+}
 BackdropNode {
  inputs 0
  name BackdropNode13
@@ -8,8 +34,8 @@ BackdropNode {
  note_font_size 42
  note_font_color 0xffffffff
  selected true
- xpos -1162
- ypos -224
+ xpos -131
+ ypos -352
  bdwidth 494
  bdheight 662
  z_order -1
@@ -22,8 +48,8 @@ BackdropNode {
  note_font_size 42
  note_font_color 0xffffffff
  selected true
- xpos -3950
- ypos -216
+ xpos -2919
+ ypos -344
  bdwidth 654
  bdheight 661
  z_order -1
@@ -36,8 +62,8 @@ BackdropNode {
  note_font_size 42
  note_font_color 0xffffffff
  selected true
- xpos -1900
- ypos -209
+ xpos -869
+ ypos -337
  bdwidth 604
  bdheight 658
  z_order -1
@@ -50,8 +76,8 @@ BackdropNode {
  note_font_size 42
  note_font_color 0xffffffff
  selected true
- xpos -3174
- ypos -215
+ xpos -2143
+ ypos -343
  bdwidth 385
  bdheight 563
  z_order -1
@@ -64,10 +90,24 @@ BackdropNode {
  note_font_size 42
  note_font_color 0xffffffff
  selected true
- xpos -2650
- ypos -213
+ xpos -1619
+ ypos -341
  bdwidth 601
  bdheight 756
+ z_order -1
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode24
+ tile_color 0x2a2a2aff
+ label "Multipass Comp"
+ note_font_size 42
+ note_font_color 0xffffffff
+ selected true
+ xpos -3985
+ ypos -356
+ bdwidth 666
+ bdheight 914
  z_order -1
 }
 BackdropNode {
@@ -78,8 +118,8 @@ BackdropNode {
  note_font_size 36
  note_font_color 0xffffffff
  selected true
- xpos -1152
- ypos -144
+ xpos -121
+ ypos -272
  bdwidth 474
  bdheight 146
 }
@@ -91,8 +131,8 @@ BackdropNode {
  note_font_size 36
  note_font_color 0xffffffff
  selected true
- xpos -3940
- ypos 141
+ xpos -2909
+ ypos 13
  bdwidth 600
  bdheight 293
 }
@@ -104,8 +144,8 @@ BackdropNode {
  note_font_size 36
  note_font_color 0xffffffff
  selected true
- xpos -1890
- ypos 143
+ xpos -859
+ ypos 15
  bdwidth 550
  bdheight 295
 }
@@ -117,8 +157,8 @@ BackdropNode {
  note_font_size 36
  note_font_color 0xffffffff
  selected true
- xpos -3164
- ypos 136
+ xpos -2133
+ ypos 8
  bdwidth 331
  bdheight 201
 }
@@ -130,8 +170,8 @@ BackdropNode {
  note_font_size 36
  note_font_color 0xffffffff
  selected true
- xpos -2640
- ypos 139
+ xpos -1609
+ ypos 11
  bdwidth 555
  bdheight 390
 }
@@ -143,8 +183,8 @@ BackdropNode {
  note_font_size 36
  note_font_color 0xffffffff
  selected true
- xpos -2640
- ypos -133
+ xpos -1609
+ ypos -261
  bdwidth 584
  bdheight 146
 }
@@ -156,8 +196,8 @@ BackdropNode {
  note_font_size 36
  note_font_color 0xffffffff
  selected true
- xpos -3940
- ypos -136
+ xpos -2909
+ ypos -264
  bdwidth 634
  bdheight 146
 }
@@ -169,10 +209,23 @@ BackdropNode {
  note_font_size 36
  note_font_color 0xffffffff
  selected true
- xpos -2640
- ypos 23
+ xpos -1609
+ ypos -105
  bdwidth 584
  bdheight 108
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode29
+ tile_color 0x4f4f4fff
+ label "Add back together"
+ note_font_size 36
+ note_font_color 0xffffffff
+ selected true
+ xpos -3975
+ ypos 224
+ bdwidth 604
+ bdheight 141
 }
 BackdropNode {
  inputs 0
@@ -182,10 +235,36 @@ BackdropNode {
  note_font_size 36
  note_font_color 0xffffffff
  selected true
- xpos -1890
- ypos -129
+ xpos -859
+ ypos -257
  bdwidth 584
  bdheight 146
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode34
+ tile_color 0x4f4f4fff
+ label "Subtract desired AOV"
+ note_font_size 36
+ note_font_color 0xffffffff
+ selected true
+ xpos -3975
+ ypos -85
+ bdwidth 634
+ bdheight 146
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode39
+ tile_color 0x4f4f4fff
+ label "Grade Individually"
+ note_font_size 36
+ note_font_color 0xffffffff
+ selected true
+ xpos -3975
+ ypos 89
+ bdwidth 634
+ bdheight 108
 }
 BackdropNode {
  inputs 0
@@ -195,10 +274,36 @@ BackdropNode {
  note_font_size 36
  note_font_color 0xffffffff
  selected true
- xpos -3164
- ypos -135
+ xpos -2133
+ ypos -263
  bdwidth 365
  bdheight 146
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode43
+ tile_color 0x4f4f4fff
+ label "Remove channels and Premult"
+ note_font_size 36
+ note_font_color 0xffffffff
+ selected true
+ xpos -3976
+ ypos 390
+ bdwidth 604
+ bdheight 141
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode44
+ tile_color 0x4f4f4fff
+ label "Unpremult All Channels"
+ note_font_size 36
+ note_font_color 0xffffffff
+ selected true
+ xpos -3975
+ ypos -218
+ bdwidth 634
+ bdheight 108
 }
 BackdropNode {
  inputs 0
@@ -208,8 +313,8 @@ BackdropNode {
  note_font_size 36
  note_font_color 0xffffffff
  selected true
- xpos -1152
- ypos 12
+ xpos -121
+ ypos -116
  bdwidth 474
  bdheight 108
 }
@@ -221,8 +326,8 @@ BackdropNode {
  note_font_size 36
  note_font_color 0xffffffff
  selected true
- xpos -3940
- ypos 20
+ xpos -2909
+ ypos -108
  bdwidth 634
  bdheight 108
 }
@@ -234,8 +339,8 @@ BackdropNode {
  note_font_size 36
  note_font_color 0xffffffff
  selected true
- xpos -1890
- ypos 27
+ xpos -859
+ ypos -101
  bdwidth 584
  bdheight 108
 }
@@ -247,8 +352,8 @@ BackdropNode {
  note_font_size 36
  note_font_color 0xffffffff
  selected true
- xpos -3164
- ypos 21
+ xpos -2133
+ ypos -107
  bdwidth 365
  bdheight 108
 }
@@ -260,8 +365,8 @@ BackdropNode {
  note_font_size 36
  note_font_color 0xffffffff
  selected true
- xpos -1152
- ypos 140
+ xpos -121
+ ypos 12
  bdwidth 440
  bdheight 288
 }
@@ -269,39 +374,39 @@ push $cut_paste_input
 Dot {
  name Dot21
  label Multipass_EXR
- note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
  note_font_size 16
  note_font_color 0xffffffff
  selected true
- xpos -1108
- ypos -264
+ xpos -77
+ ypos -392
 }
 Dot {
  name Dot8
  selected true
- xpos -1108
- ypos -64
+ xpos -77
+ ypos -192
 }
-set N12ee29c0 [stack 0]
+set N15b74780 [stack 0]
 Dot {
  name Dot18
  selected true
- xpos -985
- ypos -64
+ xpos 46
+ ypos -192
 }
-set N12ee5060 [stack 0]
+set N15b769a0 [stack 0]
 Dot {
  name Dot4
  selected true
- xpos -865
- ypos -64
+ xpos 166
+ ypos -192
 }
-set N12ee7620 [stack 0]
+set N15b78fc0 [stack 0]
 Dot {
  name Dot6
  selected true
- xpos -734
- ypos -64
+ xpos 297
+ ypos -192
 }
 add_layer {refract refract.red refract.green refract.blue}
 Shuffle {
@@ -309,80 +414,80 @@ Shuffle {
  out rgb
  name refract
  selected true
- xpos -768
- ypos -26
+ xpos 263
+ ypos -154
 }
 Grade {
  name Grade4
  selected true
- xpos -768
- ypos 92
+ xpos 263
+ ypos -36
 }
 Dot {
  name Dot3
  selected true
- xpos -734
- ypos 403
+ xpos 297
+ ypos 275
 }
-push $N12ee7620
+push $N15b78fc0
 add_layer {reflect reflect.red reflect.green reflect.blue}
 Shuffle {
  in reflect
  out rgb
  name reflect
  selected true
- xpos -899
- ypos -26
+ xpos 132
+ ypos -154
 }
 Grade {
  name Grade3
  selected true
- xpos -899
- ypos 92
+ xpos 132
+ ypos -36
 }
 Dot {
  name Dot7
  selected true
- xpos -865
- ypos 316
+ xpos 166
+ ypos 188
 }
-push $N12ee5060
+push $N15b769a0
 add_layer {lighting lighting.red lighting.green lighting.blue}
 Shuffle {
  in lighting
  out rgb
  name lighting
  selected true
- xpos -1019
- ypos -26
+ xpos 12
+ ypos -154
 }
 Grade {
  name Grade2
  selected true
- xpos -1019
- ypos 92
+ xpos 12
+ ypos -36
 }
 Dot {
  name Dot11
  selected true
- xpos -985
- ypos 223
+ xpos 46
+ ypos 95
 }
-push $N12ee29c0
+push $N15b74780
 add_layer {GI GI.red GI.green GI.blue}
 Shuffle {
  in GI
  out rgb
  name GI
  selected true
- xpos -1142
- ypos -26
+ xpos -111
+ ypos -154
 }
 Grade {
  name Grade5
  selected true
- xpos -1142
- ypos 92
+ xpos -111
+ ypos -36
 }
 Merge2 {
  inputs 2
@@ -392,8 +497,8 @@ Merge2 {
  output rgb
  name Merge6
  selected true
- xpos -1142
- ypos 220
+ xpos -111
+ ypos 92
 }
 Merge2 {
  inputs 2
@@ -403,8 +508,8 @@ Merge2 {
  output rgb
  name Merge7
  selected true
- xpos -1142
- ypos 313
+ xpos -111
+ ypos 185
 }
 Merge2 {
  inputs 2
@@ -414,59 +519,59 @@ Merge2 {
  output rgb
  name Merge8
  selected true
- xpos -1142
- ypos 400
+ xpos -111
+ ypos 272
 }
 Dot {
  name Dot28
  selected true
- xpos -1108
- ypos 491
+ xpos -77
+ ypos 363
 }
 Dot {
  inputs 0
  name Dot34
  label Multipass_EXR
- note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
  note_font_size 16
  note_font_color 0xffffffff
  selected true
- xpos -1846
- ypos -249
+ xpos -815
+ ypos -377
 }
 Dot {
  name Dot22
  selected true
- xpos -1846
- ypos -49
+ xpos -815
+ ypos -177
 }
-set N28440e10 [stack 0]
+set N15bd4050 [stack 0]
 Dot {
  name Dot23
  selected true
- xpos -1732
- ypos -49
+ xpos -701
+ ypos -177
 }
-set N28443410 [stack 0]
+set N15bd6230 [stack 0]
 Dot {
  name Dot24
  selected true
- xpos -1606
- ypos -49
+ xpos -575
+ ypos -177
 }
-set N284459b0 [stack 0]
+set N15bd86a0 [stack 0]
 Dot {
  name Dot25
  selected true
- xpos -1489
- ypos -49
+ xpos -458
+ ypos -177
 }
-set N28447f50 [stack 0]
+set N15bdae20 [stack 0]
 Dot {
  name Dot29
  selected true
- xpos -1362
- ypos -49
+ xpos -331
+ ypos -177
 }
 add_layer {transmissive transmissive.red transmissive.green transmissive.blue}
 Shuffle {
@@ -474,58 +579,58 @@ Shuffle {
  out rgb
  name transmissive
  selected true
- xpos -1396
- ypos -11
+ xpos -365
+ ypos -139
 }
 Grade {
  name Grade14
  selected true
- xpos -1396
- ypos 107
+ xpos -365
+ ypos -21
 }
 Dot {
  name Dot30
  selected true
- xpos -1362
- ypos 413
+ xpos -331
+ ypos 285
 }
-push $N28447f50
+push $N15bdae20
 add_layer {indirectSpecular indirectSpecular.red indirectSpecular.green indirectSpecular.blue}
 Shuffle {
  in indirectSpecular
  out rgb
  name indirspec
  selected true
- xpos -1523
- ypos -11
+ xpos -492
+ ypos -139
 }
 Grade {
  name Grade13
  selected true
- xpos -1523
- ypos 107
+ xpos -492
+ ypos -21
 }
 Dot {
  name Dot26
  selected true
- xpos -1489
- ypos 226
+ xpos -458
+ ypos 98
 }
-push $N284459b0
+push $N15bd86a0
 add_layer {directSpecular directSpecular.red directSpecular.green directSpecular.blue}
 Shuffle {
  in directSpecular
  out rgb
  name dirSpec
  selected true
- xpos -1640
- ypos -11
+ xpos -609
+ ypos -139
 }
 Grade {
  name Grade12
  selected true
- xpos -1640
- ypos 107
+ xpos -609
+ ypos -21
 }
 Merge2 {
  inputs 2
@@ -535,52 +640,52 @@ Merge2 {
  output rgb
  name Merge12
  selected true
- xpos -1640
- ypos 223
+ xpos -609
+ ypos 95
 }
 Dot {
  name Dot27
  selected true
- xpos -1606
- ypos 324
+ xpos -575
+ ypos 196
 }
-push $N28443410
+push $N15bd6230
 add_layer {indirectDiffuse indirectDiffuse.red indirectDiffuse.green indirectDiffuse.blue}
 Shuffle {
  in indirectDiffuse
  out rgb
  name indirDiffuse
  selected true
- xpos -1766
- ypos -11
+ xpos -735
+ ypos -139
 }
 Grade {
  name Grade11
  selected true
- xpos -1766
- ypos 107
+ xpos -735
+ ypos -21
 }
 Dot {
  name Dot17
  selected true
- xpos -1732
- ypos 228
+ xpos -701
+ ypos 100
 }
-push $N28440e10
+push $N15bd4050
 add_layer {directDiffuse directDiffuse.red directDiffuse.green directDiffuse.blue}
 Shuffle {
  in directDiffuse
  alpha black
  name dirDiffuse
  selected true
- xpos -1880
- ypos -11
+ xpos -849
+ ypos -139
 }
 Grade {
  name Grade10
  selected true
- xpos -1880
- ypos 107
+ xpos -849
+ ypos -21
 }
 Merge2 {
  inputs 2
@@ -590,8 +695,8 @@ Merge2 {
  output rgb
  name Merge10
  selected true
- xpos -1880
- ypos 225
+ xpos -849
+ ypos 97
 }
 Merge2 {
  inputs 2
@@ -601,8 +706,8 @@ Merge2 {
  output rgb
  name Merge11
  selected true
- xpos -1880
- ypos 321
+ xpos -849
+ ypos 193
 }
 Merge2 {
  inputs 2
@@ -612,45 +717,45 @@ Merge2 {
  output rgb
  name Merge13
  selected true
- xpos -1880
- ypos 410
+ xpos -849
+ ypos 282
 }
 Dot {
  name Dot37
  selected true
- xpos -1846
- ypos 506
+ xpos -815
+ ypos 378
 }
 Dot {
  inputs 0
  name Dot35
  label Multipass_EXR
- note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
  note_font_size 16
  note_font_color 0xffffffff
  selected true
- xpos -3120
- ypos -255
+ xpos -2089
+ ypos -383
 }
 Dot {
  name Dot14
  selected true
- xpos -3120
- ypos -55
+ xpos -2089
+ ypos -183
 }
-set N284b2af0 [stack 0]
+set N15e56530 [stack 0]
 Dot {
  name Dot19
  selected true
- xpos -2987
- ypos -55
+ xpos -1956
+ ypos -183
 }
-set N284b50f0 [stack 0]
+set N15e589a0 [stack 0]
 Dot {
  name Dot20
  selected true
- xpos -2855
- ypos -55
+ xpos -1824
+ ypos -183
 }
 add_layer {_0003_Refraction _0003_Refraction.red _0003_Refraction.green _0003_Refraction.blue}
 Shuffle {
@@ -658,58 +763,58 @@ Shuffle {
  out rgb
  name refration_c4d
  selected true
- xpos -2889
- ypos -17
+ xpos -1858
+ ypos -145
 }
 Grade {
  name Grade6
  selected true
- xpos -2889
- ypos 101
+ xpos -1858
+ ypos -27
 }
 Dot {
  name Dot31
  selected true
- xpos -2855
- ypos 312
+ xpos -1824
+ ypos 184
 }
-push $N284b50f0
+push $N15e589a0
 add_layer {_0002_Reflection _0002_Reflection.red _0002_Reflection.green _0002_Reflection.blue}
 Shuffle {
  in _0002_Reflection
  out rgb
  name reflection_c4d
  selected true
- xpos -3021
- ypos -17
+ xpos -1990
+ ypos -145
 }
 Grade {
  name Grade16
  selected true
- xpos -3021
- ypos 101
+ xpos -1990
+ ypos -27
 }
 Dot {
  name Dot32
  selected true
- xpos -2987
- ypos 219
+ xpos -1956
+ ypos 91
 }
-push $N284b2af0
+push $N15e56530
 add_layer {_0001_Global_Illumination _0001_Global_Illumination.red _0001_Global_Illumination.green _0001_Global_Illumination.blue}
 Shuffle {
  in _0001_Global_Illumination
  out rgb
  name GI1
  selected true
- xpos -3154
- ypos -17
+ xpos -2123
+ ypos -145
 }
 Grade {
  name Grade15
  selected true
- xpos -3154
- ypos 101
+ xpos -2123
+ ypos -27
 }
 Merge2 {
  inputs 2
@@ -719,8 +824,8 @@ Merge2 {
  output rgb
  name Merge9
  selected true
- xpos -3154
- ypos 216
+ xpos -2123
+ ypos 88
 }
 Merge2 {
  inputs 2
@@ -730,59 +835,59 @@ Merge2 {
  output rgb
  name Merge14
  selected true
- xpos -3154
- ypos 309
+ xpos -2123
+ ypos 181
 }
 Dot {
  name Dot38
  selected true
- xpos -3120
- ypos 416
+ xpos -2089
+ ypos 288
 }
 Dot {
  inputs 0
  name Dot39
  label Multipass_EXR
- note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
  note_font_size 16
  note_font_color 0xffffffff
  selected true
- xpos -2596
- ypos -254
+ xpos -1565
+ ypos -382
 }
 Dot {
  name Dot40
  selected true
- xpos -2596
- ypos -53
+ xpos -1565
+ ypos -181
 }
-set N284f5880 [stack 0]
+set N15f13e20 [stack 0]
 Dot {
  name Dot41
  selected true
- xpos -2482
- ypos -53
+ xpos -1451
+ ypos -181
 }
-set N284f7e90 [stack 0]
+set N15f15fe0 [stack 0]
 Dot {
  name Dot42
  selected true
- xpos -2356
- ypos -53
+ xpos -1325
+ ypos -181
 }
-set N284fa430 [stack 0]
+set N15f18450 [stack 0]
 Dot {
  name Dot43
  selected true
- xpos -2239
- ypos -53
+ xpos -1208
+ ypos -181
 }
-set N285009b0 [stack 0]
+set N15f1a8c0 [stack 0]
 Dot {
  name Dot44
  selected true
- xpos -2112
- ypos -53
+ xpos -1081
+ ypos -181
 }
 add_layer {Transparent_Shading_Output Transparent_Shading_Output.red Transparent_Shading_Output.green Transparent_Shading_Output.blue}
 Shuffle {
@@ -790,104 +895,104 @@ Shuffle {
  out rgb
  name Transparent
  selected true
- xpos -2146
- ypos -15
+ xpos -1115
+ ypos -143
 }
 Grade {
  white_panelDropped true
  name Grade18
  selected true
- xpos -2146
- ypos 103
+ xpos -1115
+ ypos -25
 }
 Dot {
  name Dot45
  selected true
- xpos -2112
- ypos 495
+ xpos -1081
+ ypos 367
 }
-push $N285009b0
+push $N15f1a8c0
 add_layer {Reflection_Shading_Output Reflection_Shading_Output.red Reflection_Shading_Output.green Reflection_Shading_Output.blue}
 Shuffle {
  in Reflection_Shading_Output
  out rgb
  name Refl
  selected true
- xpos -2273
- ypos -15
+ xpos -1242
+ ypos -143
 }
 Grade {
  name Grade19
  selected true
- xpos -2273
- ypos 103
+ xpos -1242
+ ypos -25
 }
 Dot {
  name Dot46
  selected true
- xpos -2239
- ypos 408
+ xpos -1208
+ ypos 280
 }
-push $N284fa430
+push $N15f18450
 add_layer {Specular_Shading_Output Specular_Shading_Output.red Specular_Shading_Output.green Specular_Shading_Output.blue}
 Shuffle {
  in Specular_Shading_Output
  out rgb
  name Spec
  selected true
- xpos -2390
- ypos -15
+ xpos -1359
+ ypos -143
 }
 Grade {
  name Grade20
  selected true
- xpos -2390
- ypos 103
+ xpos -1359
+ ypos -25
 }
 Dot {
  name Dot47
  selected true
- xpos -2356
- ypos 320
+ xpos -1325
+ ypos 192
 }
-push $N284f7e90
+push $N15f15fe0
 add_layer {Diffuse_Shading__Indirect__Ou Diffuse_Shading__Indirect__Ou.red Diffuse_Shading__Indirect__Ou.green Diffuse_Shading__Indirect__Ou.blue}
 Shuffle {
  in Diffuse_Shading__Indirect__Ou
  out rgb
  name IllumIndirect
  selected true
- xpos -2516
- ypos -15
+ xpos -1485
+ ypos -143
 }
 Grade {
  white_panelDropped true
  name Grade21
  selected true
- xpos -2516
- ypos 103
+ xpos -1485
+ ypos -25
 }
 Dot {
  name Dot48
  selected true
- xpos -2482
- ypos 224
+ xpos -1451
+ ypos 96
 }
-push $N284f5880
+push $N15f13e20
 add_layer {Diffuse_Shading__Direct__Outp Diffuse_Shading__Direct__Outp.red Diffuse_Shading__Direct__Outp.green Diffuse_Shading__Direct__Outp.blue}
 Shuffle {
  in Diffuse_Shading__Direct__Outp
  alpha black
  name IllumDirect
  selected true
- xpos -2630
- ypos -15
+ xpos -1599
+ ypos -143
 }
 Grade {
  name Grade22
  selected true
- xpos -2630
- ypos 103
+ xpos -1599
+ ypos -25
 }
 Merge2 {
  inputs 2
@@ -897,8 +1002,8 @@ Merge2 {
  output rgb
  name Merge15
  selected true
- xpos -2630
- ypos 221
+ xpos -1599
+ ypos 93
 }
 Merge2 {
  inputs 2
@@ -908,8 +1013,8 @@ Merge2 {
  output rgb
  name Merge16
  selected true
- xpos -2630
- ypos 317
+ xpos -1599
+ ypos 189
 }
 Merge2 {
  inputs 2
@@ -919,67 +1024,67 @@ Merge2 {
  output rgb
  name Merge17
  selected true
- xpos -2630
- ypos 406
+ xpos -1599
+ ypos 278
 }
 Merge2 {
  inputs 2
  operation plus
  name Merge18
  selected true
- xpos -2630
- ypos 492
+ xpos -1599
+ ypos 364
 }
 Dot {
  name Dot49
  selected true
- xpos -2596
- ypos 613
+ xpos -1565
+ ypos 485
 }
 Dot {
  inputs 0
  name Dot33
  label Multipass_EXR
- note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
  note_font_size 16
  note_font_color 0xffffffff
  selected true
- xpos -3896
- ypos -256
+ xpos -2865
+ ypos -384
 }
 Dot {
  name Dot9
  selected true
- xpos -3896
- ypos -56
+ xpos -2865
+ ypos -184
 }
-set N3cf6fc0 [stack 0]
+set N15f93370 [stack 0]
 Dot {
  name Dot10
  selected true
- xpos -3781
- ypos -56
+ xpos -2750
+ ypos -184
 }
-set N3c581e0 [stack 0]
+set N15f957e0 [stack 0]
 Dot {
  name Dot12
  selected true
- xpos -3626
- ypos -56
+ xpos -2595
+ ypos -184
 }
-set N3cf5fb0 [stack 0]
+set N15f97c50 [stack 0]
 Dot {
  name Dot13
  selected true
- xpos -3511
- ypos -56
+ xpos -2480
+ ypos -184
 }
-set N27701500 [stack 0]
+set N15f9a0c0 [stack 0]
 Dot {
  name Dot15
  selected true
- xpos -3362
- ypos -56
+ xpos -2331
+ ypos -184
 }
 add_layer {refraction refraction.red refraction.green refraction.blue}
 Shuffle {
@@ -987,138 +1092,229 @@ Shuffle {
  out rgb
  name refraction_
  selected true
- xpos -3396
- ypos -18
+ xpos -2365
+ ypos -146
 }
 Grade {
  name Grade9
  selected true
- xpos -3396
- ypos 100
+ xpos -2365
+ ypos -28
 }
 Dot {
  name Dot16
  selected true
- xpos -3362
- ypos 409
+ xpos -2331
+ ypos 281
 }
-push $N27701500
+push $N15f9a0c0
 add_layer {indirect_specular indirect_specular.red indirect_specular.green indirect_specular.blue}
 Shuffle {
  in indirect_specular
  out rgb
  name indirect_specular
  selected true
- xpos -3545
- ypos -18
+ xpos -2514
+ ypos -146
 }
 Grade {
  name Grade8
  selected true
- xpos -3545
- ypos 100
+ xpos -2514
+ ypos -28
 }
 Dot {
  name Dot36
  selected true
- xpos -3511
- ypos 224
+ xpos -2480
+ ypos 96
 }
-push $N3cf5fb0
+push $N15f97c50
 add_layer {direct_specular direct_specular.red direct_specular.green direct_specular.blue}
 Shuffle {
  in direct_specular
  out rgb
  name direct_specular
  selected true
- xpos -3660
- ypos -18
+ xpos -2629
+ ypos -146
 }
 Grade {
  name Grade7
  selected true
- xpos -3660
- ypos 100
+ xpos -2629
+ ypos -28
 }
 Merge2 {
  inputs 2
  operation plus
  name Merge19
  selected true
- xpos -3660
- ypos 221
+ xpos -2629
+ ypos 93
 }
 Dot {
  name Dot50
  selected true
- xpos -3626
- ypos 317
+ xpos -2595
+ ypos 189
 }
-push $N3c581e0
+push $N15f957e0
 add_layer {indirect_diffuse indirect_diffuse.red indirect_diffuse.green indirect_diffuse.blue}
 Shuffle {
  in indirect_diffuse
  out rgb
  name indirect_diffuse
  selected true
- xpos -3815
- ypos -18
+ xpos -2784
+ ypos -146
 }
 Grade {
  name Grade23
  selected true
- xpos -3815
- ypos 100
+ xpos -2784
+ ypos -28
 }
 Dot {
  name Dot51
  selected true
- xpos -3781
- ypos 227
+ xpos -2750
+ ypos 99
 }
-push $N3cf6fc0
+push $N15f93370
 add_layer {direct_diffuse direct_diffuse.red direct_diffuse.green direct_diffuse.blue}
 Shuffle {
  in direct_diffuse
  out rgb
  name direct_diffuse
  selected true
- xpos -3930
- ypos -18
+ xpos -2899
+ ypos -146
 }
 Grade {
  name Grade24
  selected true
- xpos -3930
- ypos 100
+ xpos -2899
+ ypos -28
 }
 Merge2 {
  inputs 2
  operation plus
  name Merge20
  selected true
- xpos -3930
- ypos 224
+ xpos -2899
+ ypos 96
 }
 Merge2 {
  inputs 2
  operation plus
  name Merge21
  selected true
- xpos -3930
- ypos 314
+ xpos -2899
+ ypos 186
 }
 Merge2 {
  inputs 2
  operation plus
  name Merge22
  selected true
- xpos -3930
- ypos 406
+ xpos -2899
+ ypos 278
 }
 Dot {
  name Dot52
  selected true
- xpos -3896
- ypos 499
+ xpos -2865
+ ypos 371
+}
+Dot {
+ inputs 0
+ name Dot88
+ label Multipass_EXR
+ note_font "Verdana Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold Bold"
+ note_font_size 16
+ note_font_color 0xffffffff
+ selected true
+ xpos -3931
+ ypos -437
+}
+Unpremult {
+ channels all
+ name Unpremult1
+ selected true
+ xpos -3965
+ ypos -156
+}
+Dot {
+ name Dot89
+ selected true
+ xpos -3931
+ ypos -17
+}
+set N18255a70 [stack 0]
+Dot {
+ name Dot90
+ selected true
+ xpos -3816
+ ypos -17
+}
+Shuffle {
+ in indirect_diffuse
+ out rgb
+ name indirect_diffuse1
+ selected true
+ xpos -3850
+ ypos 21
+}
+set N1829aef0 [stack 0]
+Grade {
+ name Grade43
+ selected true
+ xpos -3850
+ ypos 162
+}
+Dot {
+ name Dot97
+ selected true
+ xpos -3816
+ ypos 310
+}
+push $N1829aef0
+push $N18255a70
+Merge2 {
+ inputs 2
+ operation from
+ name Merge35
+ selected true
+ xpos -3965
+ ypos 21
+}
+Merge2 {
+ inputs 2
+ operation plus
+ name Merge32
+ selected true
+ xpos -3965
+ ypos 307
+}
+Remove {
+ operation keep
+ channels rgba
+ channels2 depth
+ name Remove1
+ selected true
+ xpos -3965
+ ypos 451
+}
+Premult {
+ name Premult1
+ selected true
+ xpos -3965
+ ypos 475
+}
+Dot {
+ name Dot98
+ selected true
+ xpos -3931
+ ypos 597
 }
