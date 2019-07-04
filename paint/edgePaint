@@ -1,0 +1,172 @@
+set cut_paste_input [stack 0]
+version 11.1 v3
+Dot {
+ inputs 0
+ name Dot12
+ label "Main Roto Goes Here"
+ selected true
+ xpos 1898
+ ypos -1096
+}
+Blur {
+ inputs 0
+ size 7
+ name Blur3
+ selected true
+ xpos 1904
+ ypos -1536
+}
+Dot {
+ name Dot47
+ label "Your Protection Mask Goes here"
+ selected true
+ xpos 1936
+ ypos -1444
+}
+Dot {
+ inputs 0
+ name Dot48
+ label "Denoise PLate"
+ note_font_size 30
+ selected true
+ xpos 1822
+ ypos -2079
+}
+set Nccdd4140 [stack 0]
+push $Nccdd4140
+Dot {
+ name Dot49
+ selected true
+ xpos 1635
+ ypos -2079
+}
+NoOp {
+ name NoOp2
+ label "Paint goes Here"
+ selected true
+ xpos 1603
+ ypos -2039
+}
+Dot {
+ name Dot50
+ selected true
+ xpos 1635
+ ypos -1726
+}
+set Nccddae90 [stack 0]
+Difference {
+ inputs 2
+ gain 1000000
+ name Difference1
+ selected true
+ xpos 1790
+ ypos -1733
+}
+Shuffle {
+ red alpha
+ green alpha
+ blue alpha
+ name Shuffle7
+ selected true
+ xpos 1790
+ ypos -1683
+}
+Grade {
+ channels all
+ blackpoint 0.0003
+ whitepoint 0.0005
+ white_clamp true
+ name Grade4
+ selected true
+ xpos 1790
+ ypos -1644
+}
+FilterErode {
+ channels all
+ size 0.9
+ name FilterErode6
+ selected true
+ xpos 1790
+ ypos -1598
+}
+Blur {
+ size 2
+ name Blur5
+ selected true
+ xpos 1790
+ ypos -1548
+}
+Shuffle {
+ red black
+ green black
+ blue black
+ name Shuffle8
+ selected true
+ xpos 1790
+ ypos -1500
+}
+push $Nccddae90
+NoOp {
+ name NoOp3
+ label "Grain Goes Here"
+ selected true
+ xpos 1603
+ ypos -1682
+}
+Merge2 {
+ inputs 2
+ operation mask
+ bbox A
+ name Merge3
+ selected true
+ xpos 1603
+ ypos -1500
+}
+Merge2 {
+ inputs 2
+ operation mask
+ bbox A
+ name Merge17
+ selected true
+ xpos 1603
+ ypos -1445
+}
+push $cut_paste_input
+Dot {
+ name Dot58
+ selected true
+ xpos 1342
+ ypos -1993
+}
+Dot {
+ name Dot51
+ label Plate
+ note_font_size 30
+ selected true
+ xpos 1342
+ ypos -1401
+}
+Merge2 {
+ inputs 2
+ name Merge18
+ selected true
+ xpos 1603
+ ypos -1402
+}
+Merge2 {
+ inputs 2
+ operation mask
+ bbox A
+ name Merge27
+ selected true
+ xpos 1603
+ ypos -1097
+}
+Dot {
+ name Dot53
+ label "To over"
+ note_font_size 20
+ selected true
+ xpos 1454
+ ypos -1094
+}
